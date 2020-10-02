@@ -64,7 +64,7 @@
 
         #region Actualizar
         // PUT api/<DocumentoVentaProfitController>/5
-        [HttpPost("Actualizar")]
+        [HttpPut("Actualizar")]
         public IActionResult Actualizar([FromBody] SaDocumentoVenta documento, string Emp)
         {
             resultado = metodo.Update(documento, Emp);

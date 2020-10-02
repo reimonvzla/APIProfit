@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using Entidades;
+
     interface IRepositorio<T> where T: class
     {
         IEnumerable<T> GetAll(string empresaDB);
