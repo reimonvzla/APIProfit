@@ -304,7 +304,7 @@
 
                 /*resultDeta devuelve el resultado del stored procedure insertar renglones de factura de venta
                  (-1 no registró la transacción en sql). */
-
+                //' de Cliente ' {factura.CoCli}
                 FormattableString DocumentoVenta = $@"EXEC pInsertarDocumentoVenta 
                         @sNro_Doc = {numeroFactura}
                         ,@sCo_Tipo_Doc = 'FACT'
@@ -318,7 +318,7 @@
                         ,@sMov_Ban = NULL
                         ,@bAut = 1
                         ,@bContrib = {factura.Contrib}
-                        ,@sObserva = 'FACT N°  de Cliente {factura.CoCli}'
+                        ,@sObserva = {factura.Descrip}
                         ,@sNro_Orig = {numeroFactura}
                         ,@sNro_Che = NULL
                         ,@sCo_Ven = {factura.CoVen}
